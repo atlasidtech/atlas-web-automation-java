@@ -1,9 +1,12 @@
-
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.Select;
 
 public class TestRun {
 
@@ -19,7 +22,6 @@ public class TestRun {
     //for mac it --start-maximized not working properly. So need use this command to maximize
     driver.manage().window().maximize();
     driver.get("http://bdd.atlasid.tech/");
-    Thread.sleep(5000);
     
     //scenario input Quote
     By inputQuote = By.id("inputQuote");
